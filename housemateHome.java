@@ -71,6 +71,7 @@ public class HouseMateHome {
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setResizable(false);
 		
 		//LOOKING FOR HOUSEMATE
 		JLabel lblNewLabel = new JLabel("LOOKING FOR HOUSEMATES");
@@ -99,7 +100,7 @@ public class HouseMateHome {
 		});
 		mainButton0.setBounds(360, 252, 190, 25);
 		frame.getContentPane().add(mainButton0);
-	
+		
 	//button - go to home input page
 	JButton mainButton1 = new JButton("Look for Housemate");
 	mainButton1.setBackground(new Color(244, 164, 96));
@@ -161,7 +162,7 @@ public class HouseMateHome {
 	});
 	mainButton3.setBounds(360, 277, 190, 25);
 	frame.getContentPane().add(mainButton3);
-	
+	frame.setResizable(false);
 	//button - go to SIGN UP HOUSE
 		JButton mainButton4 = new JButton("Sign up");
 		mainButton4.setBackground(new Color(255, 222, 173));
@@ -178,11 +179,16 @@ public class HouseMateHome {
 		});
 		mainButton4.setBounds(69, 277, 190, 25);
 		frame.getContentPane().add(mainButton4);
-		
+		frame.setResizable(false);
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Anthony\\Desktop\\program\\12674278_10153874834657370_987102068_n.jpg"));
-		lblNewLabel_2.setBounds(159, 91, 300, 90);
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Anthony\\Desktop\\program\\12626000_10153874940177370_30971003_n.jpg"));
+		lblNewLabel_2.setBounds(159, 54, 302, 100);
 		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Anthony\\Desktop\\asefweafwefawef.jpg"));
+		lblNewLabel_1.setBounds(0, 0, 644, 415);
+		frame.getContentPane().add(lblNewLabel_1);
 	
 
 	
@@ -200,7 +206,7 @@ public class HouseMateHome {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		this.frame.setVisible(true);
-		
+		frame.setVisible(false);
 		//BACK TO MAIN BUTTON
 		JButton inputPageButton0 = new JButton("Back");
 		inputPageButton0.addActionListener(new ActionListener() {
@@ -418,8 +424,8 @@ public class HouseMateHome {
 	
 		
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.green);
-		
+		frame.getContentPane().setBackground(new Color(53,70,92));
+		frame.setResizable(false);
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -431,21 +437,28 @@ public class HouseMateHome {
 		//NAME TEXT FIELD
 		final JTextField textFieldName = new JTextField();
 		textFieldName.setBounds(30, 60, 150, 25);
+		textFieldName.setBackground(new Color(253,247,239));
 		frame.getContentPane().add(textFieldName);
 		textFieldName.setColumns(10);
 		//NAME TEXT LABEL
 		JLabel lblNewLabel = new JLabel("Full Name: ");
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
+		lblNewLabel.setForeground(Color.white);
+		
 		lblNewLabel.setBounds(30, 40, 100, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
 		//Rent
 		final JTextField textFieldRent = new JTextField();
+		textFieldRent.setBackground(new Color(253,247,239));
 		textFieldRent.setBounds(230, 60, 150, 25);
+		
+		
 		frame.getContentPane().add(textFieldRent);
 		textFieldRent.setColumns(10);
 		//NAME TEXT LABEL
 		JLabel lblNewLabel5 = new JLabel("Maximum Rent: ");
+		lblNewLabel5.setForeground(Color.white);
 		lblNewLabel5.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel5.setBounds(230, 40, 100, 16);
 		frame.getContentPane().add(lblNewLabel5);
@@ -453,61 +466,71 @@ public class HouseMateHome {
 		//Age 
 		final JTextField textFieldAge = new JTextField();
 		textFieldAge.setBounds(30, 120, 150, 27);
+		textFieldAge.setBackground(new Color(253,247,239));
 		frame.getContentPane().add(textFieldAge);
 		textFieldAge.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel1 = new JLabel("Age: ");
+		lblNewLabel1.setForeground(Color.white);
 		lblNewLabel1.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel1.setBounds(30, 100, 100, 16);
 		frame.getContentPane().add(lblNewLabel1);
 		
 		//GRAD YEAR
 		final JTextField textFieldMajor = new JTextField();
+		textFieldMajor.setBackground(new Color(253,247,239));
 		textFieldMajor.setBounds(30, 180, 150, 25);
 		frame.getContentPane().add(textFieldMajor);
 		textFieldMajor.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel2 = new JLabel("Major: ");
+		lblNewLabel2.setForeground(Color.WHITE);
 		lblNewLabel2.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel2.setBounds(30, 160, 100, 16);
 		frame.getContentPane().add(lblNewLabel2);
 		
 		//STAY
 		final JTextField textFieldGrad = new JTextField();
+		textFieldGrad.setBackground(new Color(253,247,239));
 		textFieldGrad.setBounds(30, 240, 150, 25);
 		frame.getContentPane().add(textFieldGrad);
 		textFieldGrad.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel3 = new JLabel("Grad Year: ");
+		lblNewLabel3.setForeground(Color.WHITE);
 		lblNewLabel3.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel3.setBounds(30, 220, 100, 16);
 		frame.getContentPane().add(lblNewLabel3);
 		
 		//PERSONALITY
 		final JTextField textFieldPer = new JTextField();
+		textFieldPer.setBackground(new Color(253,247,239));
 		textFieldPer.setBounds(30, 300, 204, 90);
 		frame.getContentPane().add(textFieldPer);
 		textFieldPer.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel4 = new JLabel("Personality: ");
+		lblNewLabel4.setForeground(Color.WHITE);
 		lblNewLabel4.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel4.setBounds(30, 280, 100, 16);
 		frame.getContentPane().add(lblNewLabel4);
 		
 		//STAY
 		final JTextField textFieldStay = new JTextField();
+		textFieldStay.setBackground(new Color(253,247,239));
 		textFieldStay.setBounds(230, 120, 150, 25);
 		frame.getContentPane().add(textFieldStay);
 		textFieldStay.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel6 = new JLabel("Length of stay (years): ");
+		lblNewLabel6.setForeground(Color.WHITE);
 		lblNewLabel6.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel6.setBounds(230, 100, 200, 16);
 		frame.getContentPane().add(lblNewLabel6);
 		
 		
 		JButton btnSignUp = new JButton("Enter");
-		btnSignUp.setBackground(Color.WHITE);
+		btnSignUp.setBackground(new Color(253,247,239));
 		btnSignUp.setForeground(Color.BLACK);
 		
 		btnSignUp.addActionListener(new ActionListener() {
@@ -561,7 +584,7 @@ public class HouseMateHome {
 	
 		
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.CYAN);
+		frame.getContentPane().setBackground(new Color(53,70,92));
 		
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -573,33 +596,39 @@ public class HouseMateHome {
 
 		//NAME TEXT FIELD
 		final JTextField textFieldName = new JTextField();
+		textFieldName.setBackground(new Color(253,247,239));
 		textFieldName.setBounds(30, 60, 150, 25);
 		frame.getContentPane().add(textFieldName);
 		textFieldName.setColumns(10);
 		//NAME TEXT LABEL
 		JLabel lblNewLabel = new JLabel("Full Name: ");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel.setBounds(30, 40, 100, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
 		//Rent
 		final JTextField textFieldRent = new JTextField();
+		textFieldRent.setBackground(new Color(253,247,239));
 		textFieldRent.setBounds(230, 60, 150, 25);
 		frame.getContentPane().add(textFieldRent);
 		textFieldRent.setColumns(10);
 		//NAME TEXT LABEL
 		JLabel lblNewLabel5 = new JLabel("Rent Required: ");
+		lblNewLabel5.setForeground(Color.WHITE);
 		lblNewLabel5.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel5.setBounds(230, 40, 100, 16);
 		frame.getContentPane().add(lblNewLabel5);
 		
 		//Address
 		final JTextField textFieldAd = new JTextField();
+		textFieldAd.setBackground(new Color(253,247,239));
 		textFieldAd.setBounds(30, 120, 150, 27);
 		frame.getContentPane().add(textFieldAd);
 		textFieldAd.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel1 = new JLabel("Address: ");
+		lblNewLabel1.setForeground(Color.WHITE);
 		lblNewLabel1.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel1.setBounds(30, 100, 100, 16);
 		frame.getContentPane().add(lblNewLabel1);
@@ -607,28 +636,32 @@ public class HouseMateHome {
 		
 		//STAY
 		final JTextField textFieldStay = new JTextField();
+		textFieldStay.setBackground(new Color(253,247,239));
 		textFieldStay.setBounds(30, 180, 150, 25);
 		frame.getContentPane().add(textFieldStay);
 		textFieldStay.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel3 = new JLabel("Length of Stay(years): ");
+		lblNewLabel3.setForeground(Color.WHITE);
 		lblNewLabel3.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel3.setBounds(30, 160, 200, 16);
 		frame.getContentPane().add(lblNewLabel3);
 		
 		//CONTACT
 		final JTextField textFieldContact = new JTextField();
+		textFieldContact.setBackground(new Color(253,247,239));
 		textFieldContact.setBounds(30, 240, 150, 25);
 		frame.getContentPane().add(textFieldContact);
 		textFieldStay.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel4 = new JLabel("Contact: ");
+		lblNewLabel4.setForeground(Color.WHITE);
 		lblNewLabel4.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel4.setBounds(30, 220, 200, 16);
 		frame.getContentPane().add(lblNewLabel4);
 		
 		JButton btnSignUp = new JButton("Enter");
-		btnSignUp.setBackground(Color.WHITE);
+		btnSignUp.setBackground(new Color(253,247,239));
 		btnSignUp.setForeground(Color.BLACK);
 		
 		btnSignUp.addActionListener(new ActionListener() {
