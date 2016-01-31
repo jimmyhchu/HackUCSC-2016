@@ -15,6 +15,7 @@ import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
+import javax.swing.JSlider;
 
 public class HouseMateHome {
 
@@ -74,13 +75,17 @@ public class HouseMateHome {
 		frame.setResizable(false);
 		
 		//LOOKING FOR HOUSEMATE
-		JLabel lblNewLabel = new JLabel("LOOKING FOR HOUSEMATES");
+		JLabel lblNewLabel = new JLabel(" LOOKING FOR HOUSEMATES");
+		lblNewLabel.setFont(new Font("Franklin Gothic Book", Font.BOLD, 13));
 		lblNewLabel.setBounds(69, 230, 200, 16);
+		lblNewLabel.setForeground(Color.WHITE);
 		frame.getContentPane().add(lblNewLabel);
 		
 		//LOOKING FOR HOUSE
-		JLabel lblNewLabel1 = new JLabel("LOOKING FOR HOUSE");
+		JLabel lblNewLabel1 = new JLabel("       LOOKING FOR HOUSE");
+		lblNewLabel1.setFont(new Font("Franklin Gothic Book", Font.BOLD, 13));
 		lblNewLabel1.setBounds(360, 230, 200, 16);
+		lblNewLabel1.setForeground(Color.WHITE);
 		frame.getContentPane().add(lblNewLabel1);
 		
 		
@@ -88,7 +93,7 @@ public class HouseMateHome {
 		//button - go to user input page
 		JButton mainButton0 = new JButton("Look for House");
 		mainButton0.setForeground(new Color(255, 255, 255));
-		mainButton0.setBackground(new Color(244, 164, 96));
+		mainButton0.setBackground(new Color(183,156,78));
 		mainButton0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -103,7 +108,7 @@ public class HouseMateHome {
 		
 	//button - go to home input page
 	JButton mainButton1 = new JButton("Look for Housemate");
-	mainButton1.setBackground(new Color(244, 164, 96));
+	mainButton1.setBackground(new Color(183,156,78));//244, 164, 96));
 	mainButton1.setForeground(new Color(255, 255, 255));
 	mainButton1.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
@@ -120,7 +125,8 @@ public class HouseMateHome {
 	
 	//button - go to PROFILES page
 	JButton mainButton2 = new JButton("Profiles");
-	mainButton2.setBackground(new Color(240, 128, 128));
+	mainButton2.setForeground(Color.WHITE);
+	mainButton2.setBackground(new Color(183,78,78));
 	mainButton2.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			
@@ -136,7 +142,8 @@ public class HouseMateHome {
 	
 	//button - go to PROFILESHOUSE page
 	JButton mainButton5 = new JButton("Profiles");
-	mainButton5.setBackground(new Color(240, 128, 128));
+	mainButton5.setForeground(Color.WHITE);
+	mainButton5.setBackground(new Color(183,78,78));
 	mainButton5.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			HouseMateHome temp = new HouseMateHome();
@@ -148,7 +155,7 @@ public class HouseMateHome {
 	
 	//button - go to SIGN UP USERS
 	JButton mainButton3 = new JButton("Sign up");
-	mainButton3.setBackground(new Color(255, 222, 173));
+	mainButton3.setBackground(new Color(167,107,41));
 	mainButton3.setForeground(new Color(255, 255, 255));
 	mainButton3.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
@@ -165,7 +172,7 @@ public class HouseMateHome {
 	frame.setResizable(false);
 	//button - go to SIGN UP HOUSE
 		JButton mainButton4 = new JButton("Sign up");
-		mainButton4.setBackground(new Color(255, 222, 173));
+		mainButton4.setBackground(new Color(167,107,41));
 		mainButton4.setForeground(new Color(255, 255, 255));
 		mainButton4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -202,11 +209,12 @@ public class HouseMateHome {
 	//-----------------LOOKING FOR HOUSE
 	public void lookForHouse(final ArrayList<userDB> data, final ArrayList<houseDB> houseData) {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(53,70,92));
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		this.frame.setVisible(true);
-		frame.setVisible(false);
+
+		frame.setResizable(false);
 		//BACK TO MAIN BUTTON
 		JButton inputPageButton0 = new JButton("Back");
 		inputPageButton0.addActionListener(new ActionListener() {
@@ -230,16 +238,21 @@ public class HouseMateHome {
 		textFieldStay.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel3 = new JLabel("LENGTH OF STAY (years):");
+		lblNewLabel3.setForeground(Color.WHITE);
+		lblNewLabel3.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel3.setBounds(30, 220, 200, 16);
 		frame.getContentPane().add(lblNewLabel3);
 		
 		//RENT
 		final JTextField textFieldRent = new JTextField();
+		
 		textFieldRent.setBounds(30, 300, 150, 25);
 		frame.getContentPane().add(textFieldRent);
 		textFieldRent.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel4 = new JLabel("Maximum Rent");
+		lblNewLabel4.setForeground(Color.WHITE);
+		lblNewLabel4.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel4.setBounds(30, 280, 200, 16);
 		frame.getContentPane().add(lblNewLabel4);
 		
@@ -275,11 +288,13 @@ public class HouseMateHome {
 	
 //-------------- LOOKING FOR MATE
 	public void lookForMate(final ArrayList<userDB> data, final ArrayList<houseDB> houseData) {
-	
+
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(53,70,92));
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setResizable(false);
 		
 		//BACK TO MAIN BUTTON
 		JButton inputPageButton0 = new JButton("Back");
@@ -288,15 +303,11 @@ public class HouseMateHome {
 
 				HouseMateHome temp = new HouseMateHome();
 				temp.mainPage(data, houseData);
-				
-			
 			}
 		});
 		inputPageButton0.setBounds(10, 10, 80, 25);
 		frame.getContentPane().add(inputPageButton0);
-		
-	
-		
+
 		//
 		final JTextField textFieldStay = new JTextField();
 		textFieldStay.setBounds(30, 240, 150, 25);
@@ -304,6 +315,8 @@ public class HouseMateHome {
 		textFieldStay.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel3 = new JLabel("LENGTH OF STAY (years):");
+		lblNewLabel3.setForeground(Color.WHITE);
+		lblNewLabel3.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel3.setBounds(30, 220, 200, 16);
 		frame.getContentPane().add(lblNewLabel3);
 		
@@ -314,6 +327,8 @@ public class HouseMateHome {
 		textFieldRent.setColumns(10);
 		//LABEL
 		JLabel lblNewLabel4 = new JLabel("Required Rent");
+		lblNewLabel4.setForeground(Color.WHITE);
+		lblNewLabel4.setFont(new Font("Calibri", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel4.setBounds(30, 280, 200, 16);
 		frame.getContentPane().add(lblNewLabel4);
 		
@@ -350,10 +365,11 @@ public class HouseMateHome {
 	//------------- USER PROFILES
 	public void profiles(final ArrayList<userDB> data, final ArrayList<houseDB> houseData) {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(53,70,92));
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setResizable(false);
 		//BACK TO MAIN BUTTON
 		JButton inputPageButton0 = new JButton("Back");
 		inputPageButton0.addActionListener(new ActionListener() {
@@ -385,10 +401,11 @@ public class HouseMateHome {
 	//------------- HOUSE PROFILES
 	public void houseProfile(final ArrayList<userDB> data, final ArrayList<houseDB> houseData) {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(53,70,92));
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+		frame.setResizable(false);
 		//BACK TO MAIN BUTTON
 		JButton inputPageButton0 = new JButton("Back");
 		inputPageButton0.addActionListener(new ActionListener() {
@@ -429,10 +446,8 @@ public class HouseMateHome {
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		this.frame.setVisible(true);
 		frame.setTitle("Signup Profile");
 		frame.setForeground(Color.BLACK);
-
 
 		//NAME TEXT FIELD
 		final JTextField textFieldName = new JTextField();
@@ -589,7 +604,6 @@ public class HouseMateHome {
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		this.frame.setVisible(true);
 		frame.setTitle("Signup Profile");
 		frame.setForeground(Color.BLACK);
 
