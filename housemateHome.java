@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextPane;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
+import javax.swing.JPanel;
+import javax.swing.ImageIcon;
 
 public class HouseMateHome {
 
@@ -65,6 +67,7 @@ public class HouseMateHome {
 	//------------- MAIN PAGE-------------------------
 	public void mainPage(final ArrayList<userDB> data, final ArrayList<houseDB> houseData) {
 		frame = new JFrame(); 
+		frame.getContentPane().setBackground(new Color(70, 130, 180));
 		frame.setBounds(500, 300, 650, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -83,6 +86,8 @@ public class HouseMateHome {
 		
 		//button - go to user input page
 		JButton mainButton0 = new JButton("Look for House");
+		mainButton0.setForeground(new Color(255, 255, 255));
+		mainButton0.setBackground(new Color(244, 164, 96));
 		mainButton0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -97,6 +102,8 @@ public class HouseMateHome {
 	
 	//button - go to home input page
 	JButton mainButton1 = new JButton("Look for Housemate");
+	mainButton1.setBackground(new Color(244, 164, 96));
+	mainButton1.setForeground(new Color(255, 255, 255));
 	mainButton1.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			
@@ -112,6 +119,7 @@ public class HouseMateHome {
 	
 	//button - go to PROFILES page
 	JButton mainButton2 = new JButton("Profiles");
+	mainButton2.setBackground(new Color(240, 128, 128));
 	mainButton2.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			
@@ -127,6 +135,7 @@ public class HouseMateHome {
 	
 	//button - go to PROFILESHOUSE page
 	JButton mainButton5 = new JButton("Profiles");
+	mainButton5.setBackground(new Color(240, 128, 128));
 	mainButton5.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			HouseMateHome temp = new HouseMateHome();
@@ -138,6 +147,8 @@ public class HouseMateHome {
 	
 	//button - go to SIGN UP USERS
 	JButton mainButton3 = new JButton("Sign up");
+	mainButton3.setBackground(new Color(255, 222, 173));
+	mainButton3.setForeground(new Color(255, 255, 255));
 	mainButton3.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			
@@ -153,6 +164,8 @@ public class HouseMateHome {
 	
 	//button - go to SIGN UP HOUSE
 		JButton mainButton4 = new JButton("Sign up");
+		mainButton4.setBackground(new Color(255, 222, 173));
+		mainButton4.setForeground(new Color(255, 255, 255));
 		mainButton4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -165,6 +178,11 @@ public class HouseMateHome {
 		});
 		mainButton4.setBounds(69, 277, 190, 25);
 		frame.getContentPane().add(mainButton4);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Anthony\\Desktop\\program\\12674278_10153874834657370_987102068_n.jpg"));
+		lblNewLabel_2.setBounds(159, 91, 300, 90);
+		frame.getContentPane().add(lblNewLabel_2);
 	
 
 	
